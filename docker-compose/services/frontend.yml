@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  frontend:
+    image: neoblock8/megachain:latest
+    pull_policy: always
+    platform: linux/amd64
+    restart: always
+    container_name: 'megachain'
+    env_file:
+      -  ../envs/common-frontend.env
